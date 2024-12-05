@@ -1,0 +1,38 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* tailwind config */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.star-icon::before {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("icon-star.svg");
+  background-size: contain;
+  margin-right: 1.5rem;
+}
+
+.plus-icon {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url("icon-plus.svg");
+  background-size: contain;
+}
+
+.minus-icon {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url("icon-minus.svg");
+}
+
+p {
+  @apply text-grayishpurple;
+}

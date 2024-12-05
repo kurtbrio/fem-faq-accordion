@@ -9,11 +9,13 @@
 .star-icon::before {
   content: "";
   display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-image: url("icon-star.svg");
+  width: 30px;
+  height: 30px;
+  background-image: url("/icon-star.svg");
   background-size: contain;
+  background-repeat: no-repeat;
   margin-right: 1.5rem;
+  vertical-align: middle;
 }
 
 .plus-icon {
@@ -21,8 +23,10 @@
   display: inline-block;
   width: 30px;
   height: 30px;
-  background-image: url("icon-plus.svg");
+  background-image: url("/icon-plus.svg");
   background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
 }
 
 .minus-icon {
@@ -30,7 +34,16 @@
   display: inline-block;
   width: 30px;
   height: 30px;
-  background-image: url("icon-minus.svg");
+  background-image: url("/icon-minus.svg");
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+@media (min-width: 1024px) {
+  .star-icon::before {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 p {

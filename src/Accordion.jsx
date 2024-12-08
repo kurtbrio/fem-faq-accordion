@@ -33,8 +33,8 @@ const Accordion = () => {
   };
 
   return (
-    <div className="flex justify-center items-center font-primary w-screen min-h-screen py-36 lg:py-40 xl:py-56 px-10 max-w-full bg-[url(/background-pattern-mobile.svg)] md:bg-[url(/background-pattern-desktop.svg)] bg-no-repeat bg-lightpink bg-top bg-[100%_auto]">
-      <div className="bg-white text-darkpurple min-w-80 max-w-2xl  p-6 rounded-md text-base shadow-lg ">
+    <div className="flex justify-center font-primary w-screen min-h-screen max-h-full px-10 max-w-full bg-[url(/background-pattern-mobile.svg)] md:bg-[url(/background-pattern-desktop.svg)] bg-no-repeat bg-lightpink bg-top bg-[100%_auto] overflow-hidden">
+      <div className="h-full my-32 md:my-20 lg:my-28 xl:my-52 bg-white text-darkpurple min-w-80 max-w-2xl p-6 rounded-md text-base shadow-lg ">
         <h1 className="star-icon text-3xl lg:text-5xl font-bold">FAQs</h1>
         <div className="flex flex-col gap-6 mt-6">
           {faqs.map((faq, index) => (
@@ -53,7 +53,9 @@ const Accordion = () => {
                 </div>
                 <p
                   className={
-                    selectedItem === index ? "visible" : "invisible h-0"
+                    selectedItem === index
+                      ? "visible max-h-full "
+                      : "invisible h-0"
                   }
                 >
                   {faq.answer}

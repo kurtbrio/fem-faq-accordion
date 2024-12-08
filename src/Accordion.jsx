@@ -34,7 +34,7 @@ const Accordion = () => {
 
   return (
     <div className="flex justify-center items-center font-primary w-screen min-h-screen py-36 lg:py-40 xl:py-56 px-10 max-w-full bg-[url(/background-pattern-mobile.svg)] md:bg-[url(/background-pattern-desktop.svg)] bg-no-repeat bg-lightpink bg-top bg-[100%_auto]">
-      <div className="bg-white text-darkpurple min-w-80 max-w-xl p-6 rounded-md text-base shadow-lg ">
+      <div className="bg-white text-darkpurple min-w-80 max-w-2xl  p-6 rounded-md text-base shadow-lg ">
         <h1 className="star-icon text-3xl lg:text-5xl font-bold">FAQs</h1>
         <div className="flex flex-col gap-6 mt-6">
           {faqs.map((faq, index) => (
@@ -51,7 +51,11 @@ const Accordion = () => {
                     }
                   ></button>
                 </div>
-                <p className={selectedItem === index ? "block" : "hidden"}>
+                <p
+                  className={
+                    selectedItem === index ? "visible" : "invisible h-0"
+                  }
+                >
                   {faq.answer}
                 </p>
               </div>
